@@ -1,0 +1,80 @@
+.side-nav 
+    background: $primary
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: $nav-width
+    padding: 0px 0
+    color:#fff 
+
+    .logo
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        font-weight: 600 
+        fontsize: 20px
+        border-bottom: 1px dashed grey
+        padding-bottom: 10px
+        margin-bottom: 40px
+
+        .name
+            font-size: 30px
+    
+    ul
+       display: flex
+       flex-direction: column
+       list-style: none
+       gap: 5px
+       padding: 0 10px
+
+       li
+        a
+            color: #fff
+            text-decoration: none
+            padding:10px 25px
+            background-color: #4900c7
+            border-radius: 3px
+            font-weight: 200
+            display: flex
+            transition: all 0.1 ease 
+
+            &:hover
+                background: #fff
+                color: $primary
+                font-weight: 500
+                transform: skewX(-20deg)
+
+    .logout
+        button
+            background: #ff000057
+            border: 1px solid #ffffff7a
+            position: absolute
+            left: 15px
+            bottom: 15px
+            color: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            padding:5px 25px
+            border-radius: 200px
+            font-size: 12px
+            transition: all 0.4s ease
+            font-weight: 300
+            font-style: italic
+            cursor: pointer
+            
+            &:hover
+                background: $danger
+
+                
+
+        
+
+
+
+
+
+
+            

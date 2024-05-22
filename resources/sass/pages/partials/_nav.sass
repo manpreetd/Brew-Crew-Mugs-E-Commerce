@@ -1,0 +1,34 @@
+.menu
+    $hover-color: #ffffff 
+
+    body, html 
+        margin: 0
+        padding: 0
+        font-family: 'Poppins', sans-serif
+
+
+    .navbar 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: #5101fe
+        color: #ffff
+        padding: 10px 20px
+
+        // Nesting the title and icons within navbar
+        .navbar-title 
+            font-size: 24px
+            font-weight: bold
+        
+        .navbar-icons 
+            display: flex // Ensure icons are horizontal
+            align-items: center // Center align the icons vertically
+
+            .icon 
+                padding: 0 10px
+                font-size: 24px
+
+                // Hover effect inside the icon class
+                &:hover 
+                    cursor: pointer
+                    color: $hover-color
