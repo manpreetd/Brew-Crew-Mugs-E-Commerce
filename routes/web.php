@@ -9,6 +9,8 @@ use App\Http\Controllers\ColorController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,16 @@ Route::get('/cart', [PagesController::class, 'cart'])->name('cart');
 Route::get('/wish-list', [PagesController::class, 'wishlist'])->name('wishlist');
 Route::get('/account', [PagesController::class, 'account'])->name('account')->middleware('auth');
 Route::get('/products/{id}', [PagesController::class, 'product'])->name('product');
+Route::get('/checkout', [PagesController::class, 'checkout'])->name('checkout')->middleware('auth');
+
+
+//Cart
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('addToCart');
+Route::post('/remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('removeFromCart');
+Route::post('/checkout', [CheckoutController::class, 'submitPayment'])->name('checkout.submit');
 
-
+Route::post('/add-to-wishlist{id}', [WishlistController::class, 'post'])->name('addToWishlist')->middleware('auth');
+Route::post('/remove-from-wishlist{id}', [WishlistController::class, 'remove'])->name('removeFromWishlist')->middleware('auth');
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
@@ -44,6 +53,7 @@ Route::get('/logout', function () {
     return redirect()->route('login');
 })->name('logout');
 
+//Admin Panel
 Route:: group(['prefix' => 'adminpanel', 'middleware' =>'admin'], function(){
 
    Route::get('/', [AdminController::class, 'dashboard'])->name('adminpanel'); 
@@ -59,7 +69,7 @@ Route:: group(['prefix' => 'adminpanel', 'middleware' =>'admin'], function(){
 
    });
 
-   //Products
+   //Categories
    Route:: group(['prefix' => 'categories'], function (){
         Route::get('/', [CategoryController::class, 'index'])->name('adminpanel.categories'); 
         Route::post('create', [CategoryController::class, 'store'])->name('adminpanel.category.store'); 

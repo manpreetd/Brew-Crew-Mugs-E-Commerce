@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    // admin panel
+    //Admin panel
 
     //Display the products table
     public function index(){
@@ -27,7 +27,7 @@ class ProductController extends Controller
     //Store
     public function store(Request $request){
 
-        //validate
+        //Validate
         $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required',
@@ -51,8 +51,7 @@ class ProductController extends Controller
 
         $product->colors()->attach($request->color);
 
-        // return response
-
+        // Return response
         return back()->with('success', 'Product Saved!');
 
     }
@@ -71,7 +70,7 @@ class ProductController extends Controller
     //Update
     public function update(Request $request, $id){
 
-        //validate
+        //Validate
         $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required',
@@ -101,8 +100,7 @@ class ProductController extends Controller
 
         $product->colors()->sync($request->color);
 
-        // return response
-
+        // Return response
         return back()->with('success', 'Product Updated!');
     }
 
@@ -111,6 +109,4 @@ class ProductController extends Controller
         Product::findOrFail($id)->delete();
         return back()->with('success', 'Product Deleted!');
     }
-
-
 }

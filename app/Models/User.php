@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Define a many-to-many relationship between the User and Product models through the 'wishlists' table.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function wishlist(){
+
+        return $this->belongsToMany(Product::class, 'wishlists');
+    }
 }

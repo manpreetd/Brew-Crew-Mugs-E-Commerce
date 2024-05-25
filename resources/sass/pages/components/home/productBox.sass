@@ -5,14 +5,32 @@
     box-shadow: 0 8px 40 px 0 rgba(49, 32, 138, 5%)
     text-align: center
     max-width: 270px
-    text-decoration: none
     transition: all 0.5s ease
 
     &:hover
         box-shadow: 0 10px 50px 2px rgba(0, 0, 0, 15%)
         .image
-            background: linear-gradient(to bottom right, #6100ff, #d38eff)
+            background: linear-gradient(to bottom right, #00246b, #064cd8)
 
+            .add-to-wishlist
+                display: block
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background: #fff
+                border-radius: 200px
+                padding: 10px 25px
+                width: 200px
+                max-width: 90%
+                font-weight: 400
+                transition: all 0.3s ease
+                border: none
+                cursor: pointer
+
+                &:hover
+                    background: #0641b8d5
+                    color: #fff
 
     .image
         background: #f6f7fb
@@ -24,14 +42,23 @@
         justify-content: center
         margin-bottom: 10px
         transition: all 0.5s ease
+        position: relative
         img
             max-height: 100%
             max-width: 100%
+
+        .add-to-wishlist
+            display: none
+
+
+    
+    a
+        text-decoration: none
     
     .product-title
         font-size: 18px
         font-weight: 500
-        color: #FB2E86
+        color: #083da5
         margin-bottom: 10px
 
     .color-platelets

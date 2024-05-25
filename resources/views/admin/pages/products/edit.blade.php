@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Edit Product')
 @section('content')
+
+<!--Page Title-->
 <h1 class="page-title">Edit Product</h1>
     <div class="containter">
         <div class="row mb-5">

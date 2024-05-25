@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Products')
 @section('content')
+    <!--Page Title-->
     <h1 class="page-title">Products</h1>
     <div class="container">
         <div class="text-end mb-3">
@@ -36,7 +37,7 @@
                                         <td>
                                             @foreach ($product->colors as $color)
 
-                                                <span class="badge">{{$color->name}}</span>
+                                                <span class="badge" style="background: {{$color->code}}">{{$color->name}}</span>
                                                 
                                             @endforeach
                                         </td>

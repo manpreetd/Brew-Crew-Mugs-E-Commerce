@@ -1,3 +1,4 @@
+<!--Header for Website-->
 <header class="home-header">
     <div class="home-header-text">
         <h2 class="title"> Welcome to Brew Crew Mugs </h2>

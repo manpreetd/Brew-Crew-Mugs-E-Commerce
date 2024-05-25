@@ -2,7 +2,10 @@
 @section('title', 'Category')
 @section('content')
 
+    <!-- Page Title -->
     <h1 class="page-title">Categories</h1>
+    
+    <!-- Create Category Form -->
     <div class="containter">
         <div class="row mb-5">
             <div class="col-md-6 offset-md-3">
@@ -30,7 +33,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- List of Categories -->
         <div class="row">
             <div class="col-12">
                 <div class="card">

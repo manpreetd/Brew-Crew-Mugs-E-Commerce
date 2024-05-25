@@ -12,6 +12,7 @@ class Color extends Model
 
     protected $guarded = [];
 
+    // Define a one-to-many relationship with the Product model
     public function products () {
 
         return $this->belongsToMany(Product::class);

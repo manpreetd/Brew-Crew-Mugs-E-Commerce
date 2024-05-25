@@ -12,12 +12,21 @@ body
     border: none
     cursor: pointer
     transition: all 0.3s ease
+    text-decoration: none
 
 .btn-primary
-    background: #5101fe
+    background: #083da5
     color: #fff
     &:hover
-        background: #5101feb0
+        background: #00246b
+
+.btn-outlined
+    border: 1px solid #083da5
+    background: #fff
+    color:#083da5
+    &:hover
+        background: #00246b
+        color: #fff
 
 .btn-block
     width: 100%   
@@ -25,5 +34,25 @@ body
 .container
     width: 1200px
     margin: 0 auto
+
+.page-header
+    background: linear-gradient(to bottom, #083da5, #00246b)
+    padding: 100px 25px 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    border-radius: 0 0 50% 50%
+    color: #fff
+
+    h1
+        font-size: 45px
+        font-weight: 600
+    
+    h3
+        font-size: 24px
+        font-weight: 300
+
+
 
 

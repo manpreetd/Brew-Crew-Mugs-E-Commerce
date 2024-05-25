@@ -1,10 +1,12 @@
 <aside class="side-nav">
 
+    <!-- Logo and panel title -->
     <div class="logo">
         <h1 class="name">Brew Crew Mugs</h1>
         <h2>ADMIN PANEL</h2>
     </div>
 
+    <!-- Navigation links -->
     <ul>
         <li>
             <a href="{{route('adminpanel')}}">Dashboard</a>
@@ -18,11 +20,9 @@
         <li>
             <a href="{{route('adminpanel.colors')}}">Colours</a>
         </li>
-        <li>
-            <a href="">Orders</a>
-        </li>
     </ul>
 
+    <!-- Logout button -->
     <div class="logout">
         <form action="{{route('logout')}}" method="post">
             @csrf

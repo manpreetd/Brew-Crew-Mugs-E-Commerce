@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Create Product')
 @section('content')
+
+<!--Page Title-->
 <h1 class="page-title">Create Product</h1>
     <div class="containter">
         <div class="row mb-5">
@@ -36,7 +38,9 @@
                                         @enderror>
                                     </div>
                                 </div>
-                            </div> <!-- .row -->
+                            </div> 
+
+                            <!-- row -->
 
                             <div class="row mb-3">
 
@@ -57,7 +61,7 @@
                                     </div>
                                 </div>
 
-                                <!-- .row -->
+                                <!-- row -->
 
                                 <div class="row mb-6">
                                     <div class="form-group">
@@ -71,7 +75,7 @@
                                     </div>
                                 </div>
 
-                                <!-- .row -->
+                                <!-- row -->
 
                                 <div class="row mb-3">
                                     <div class="col-md-6">
@@ -94,7 +98,7 @@
                                 </div>
                             </div> 
                             
-                            <!-- .row -->
+                            <!-- row -->
 
                             <div class="row mb-3">
                                 <div class="col-md-12">

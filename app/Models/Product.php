@@ -13,14 +13,14 @@ class Product extends Model
 
     protected $guarded = [];
 
-    //building relationship between colour and product
-
+    // Define a relationship between the Product and Category models
     public function category() {
 
         return $this->belongsTo(Category::class);
 
     }
 
+    // Define a many-to-many relationship between the Product and Color models
     public function colors() {
 
         return $this->belongsToMany(Color::class);

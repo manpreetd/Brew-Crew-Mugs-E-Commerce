@@ -2,7 +2,10 @@
 @section('title', 'Colors')
 @section('content')
 
+     <!-- Page Title -->
     <h1 class="page-title">Colors</h1>
+
+    <!-- Create Color Form -->
     <div class="containter">
         <div class="row mb-5">
             <div class="col-md-6 offset-md-3">
@@ -39,7 +42,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- List of Colors -->
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -65,7 +69,6 @@
                                         <td>{{$color->name}}</td>
                                         <td>
                                             <div style="display: flex; align-items: center; gap 10px">
-                                                
                                                 {{$color->code}} <span style="display: inline-block; width:30px; height:30px; border-radius: 50%; background: {{$color->code}};"></span>
                                             </div>
                                         </td>
